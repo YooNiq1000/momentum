@@ -1,0 +1,16 @@
+#label_1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#label_2 {
+  font-size: 18px;
+}
+
+span {
+  display: block;
+}
+
+.result {
+  font-weight: bold;
+}

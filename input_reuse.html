@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retrieve Saved Input</title>
+  </head>
+  <body>
+    <label for="inputField">Enter something:</label>
+    <input type="text" id="inputField" />
+    <button onclick="saveValue()">Save</button>
+    <button onclick="retrieveValue()">Retrieve</button>
+
+    <p>Retrieved Value: <span id="displayValue"></span></p>
+
+    <script>
+      function saveValue() {
+        // Get the input value and save it to localStorage
+        var inputValue = document.getElementById("inputField").value;
+        localStorage.setItem("savedInput", inputValue);
+        alert("Value saved!");
+      }
+
+      function retrieveValue() {
+        // Retrieve the value from localStorage
+        var storedValue = localStorage.getItem("savedInput");
+
+        // Check if a value exists and display it
+        if (storedValue) {
+          document.getElementById("displayValue").innerText = storedValue;
+        } else {
+          alert("No value found!");
+        }
+      }
+
+      // Optional: Display the saved value when the page loads
+      window.onload = function () {
+        var storedValue = localStorage.getItem("savedInput");
+        if (storedValue) {
+          document.getElementById("inputField").value = storedValue;
+          document.getElementById("displayValue").innerText = storedValue;
+        }
+      };
+    </script>
+  </body>
+</html>

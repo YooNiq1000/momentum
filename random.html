@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="random.css" />
+    <title>Random Number Game</title>
+  </head>
+  <body>
+    <header>
+      <h1>Random Number Game</h1>
+    </header>
+
+    <form id="number_input">
+      <div class="random">
+        <label id="label_1" for="random_number_max"
+          >Generate a number between 0 and</label
+        >
+        <input
+          id="random_number_max"
+          name="random"
+          required
+          type="number"
+          min="0"
+        />
+      </div>
+
+      <label id="label_2" for="user_number">Guess the number</label>
+      <input id="user_number" name="user" required type="number" min="0" />
+      <button>play!</button>
+    </form>
+    <span class="process"></span>
+    <span class="result"></span>
+    <script src="random.js"></script>
+  </body>
+</html>
